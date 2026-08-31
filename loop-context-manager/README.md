@@ -10,7 +10,7 @@ This skill encodes a better way to run long-horizon AI agents — tasks that req
 
 Standard AI agent loops (ReAct, MemGPT, LangGraph) append every observation, reasoning trace, and action to a growing conversation history. The problem: at 50+ steps the context window bloats, old facts override new observations, and costs spiral. This is why most agentic workflows feel unreliable at scale.
 
-**SKILL.state** replaces the transcript with a small, explicit, mutable JSON state object — the minimal set of facts needed to decide the next action. At every step, the model sees only:
+**loop-context-manager** replaces the transcript with a small, explicit, mutable JSON state object — the minimal set of facts needed to decide the next action. At every step, the model sees only:
 
 1. **The skill specification** — what we're doing and what the state fields mean (loaded once, never changes)
 2. **The current state** — a compact JSON object representing everything known so far
