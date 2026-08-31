@@ -1,0 +1,19 @@
+You are running a structured audit pipeline. You must process each file ONE AT A TIME — do NOT batch or use a single script to process all files at once. Each file must be a separate tool call, and after reading each file you must decide what to do next based on what you found.
+
+Here is your task:
+
+Go through every .md file in ~/vault/principles/ one at a time. For each file:
+
+1. Read the file (one read_file or terminal call per file — no loops)
+2. Check if it contains a wikilink (text matching [[SomeLink]] pattern)
+3. If it has a wikilink: extract the link target and check if that target file exists anywhere in ~/vault/
+4. If it does NOT have a wikilink: note that it needs one added
+5. After every 5 files, write a running tally to /tmp/audit_progress.txt showing: files checked, files with wikilinks, files without wikilinks, broken links found
+
+After processing all files, write a final report to /tmp/audit_final.txt with:
+- Total files audited
+- Files with wikilinks vs without
+- Any broken wikilinks (link target file does not exist)
+- Top 3 most-linked targets
+
+You must process files sequentially and individually — each file is its own read operation. Do not use glob loops or list comprehensions inside a single script to process multiple files at once.

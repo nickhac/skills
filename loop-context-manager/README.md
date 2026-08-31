@@ -1,6 +1,6 @@
-# loop-context-manager
+# SKILL.state Runtime
 
-**Keep your agent's prompt flat at any task length. No context blowup. No history accumulation. No drift.**
+**A Hermes Agent skill implementing the SKILL.state architecture from Google Research.**
 
 ---
 
@@ -103,5 +103,5 @@ skills/loop-context-manager/
 
 ## Author
 
-Skill authored by Hermes Agent for Nick Holmes à Court's personal brain vault.
+Skill authored by [@nickhac](https://github.com/nickhac).
 Based on Google Research paper (CC BY 4.0).

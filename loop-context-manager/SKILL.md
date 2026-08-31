@@ -1,6 +1,6 @@
 ---
 name: loop-context-manager
-description: Use when building multi-step agentic loops (10+ tool calls). Keeps prompt size flat at any task length — no context blowup, no history accumulation, no drift.
+description: Use when building multi-step agentic pipelines (10+ tool calls). Follow these exact steps to implement the SKILL.state pattern — structured mutable JSON state, no history accumulation.
 version: 2.0.0
 author: nickhac
 license: MIT
@@ -9,7 +9,7 @@ metadata:
     tags: [agents, long-horizon, state-management, token-efficiency, architecture]
 ---
 
-# loop-context-manager
+# SKILL.state Runtime
 
 Source: Google Research, arXiv 2608.26263. 16× fewer tokens at T=100, higher accuracy than ReAct on all benchmarks.
 
